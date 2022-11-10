@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-analytics.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+          
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            const firebaseConfig = {
+              apiKey: "AIzaSyDe-GzvQcOikFeUTqSyZP6H-5x2dKUE3WQ",
+              authDomain: "netlfixclone-1c913.firebaseapp.com",
+              projectId: "netlfixclone-1c913",
+              storageBucket: "netlfixclone-1c913.appspot.com",
+              messagingSenderId: "327810556561",
+              appId: "1:327810556561:web:e0bdd89e6934aef6279530",
+              measurementId: "G-XX5T0J40RY"
+            };
+          
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+        </script>
+        <script src="index.js"></script>
+    </body>
+</html>
