@@ -33,8 +33,8 @@ body {
     color: white;
     padding-right: 1rem;
     background-color: rgba(0, 0, 0, 0);
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     border: none;
@@ -43,8 +43,8 @@ body {
     color: white;
     background-color: rgb(220 38 38);
     cursor: pointer;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     border: none;
@@ -91,7 +91,13 @@ body {
 }
 
 .watchBut {
-  border: 2px solid gray;
+  border: 2px solid rgb(180, 177, 177);
   background-color: rgba(0, 0, 0, 0);
-  color: white;
+  color: rgb(180, 177, 177);;
+}
+
+.headerImgInfo h2 {
+  color: rgb(180, 177, 177);
+  font-size: 15px;
+  margin-top: 2rem;
 }

@@ -27,7 +27,7 @@ export default function Main() {
                     <h1>{randomMovie ? randomMovie.title: undefined}</h1>
                     <button className="playBut">Play</button>
                     <button className="watchBut">Watch Later</button>
-                    <h2>{randomMovie ? randomMovie.release_date: undefined}</h2>
+                    <h2> Released {randomMovie ? randomMovie.release_date: undefined}</h2>
                     <p>{randomMovie ? randomMovie.overview: undefined}</p>
                 </div>
             </div>
