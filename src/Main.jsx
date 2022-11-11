@@ -13,9 +13,8 @@ export default function Main() {
             const data = await response.json()
             setMovies(data.results)
         }
-    }, [])
+    }, [requests.requestPopular])
     const randomMovie = movies[Math.floor(Math.random() * movies.length)]
-    console.log(randomMovie)
     /** Getting a random movie to display on the home page screen */
     return (
         <div className="homeScreening">
