@@ -154,16 +154,72 @@ body {
   width: 100%;
 }
 
+.slider {
+  width: 100%;
+  height: 100%;
+  overflow-x: scroll;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  position: relative;
+}
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
 .movieBoxes:hover img {
   opacity: 0.3;
 }
 
 .movieBoxes:hover .middle {
   color: rgb(255, 255, 255,0.9);
-  margin-top: -2rem;
-  margin-left: 5px;
 }
 
 .middle {
   position: absolute;
+  margin-top: -2rem;
+  margin-left: 5px;
+  color: rgb(255, 255, 255,0)
+}
+
+.likeBut {
+  position: absolute;
+  bottom: 9rem;
+  left: 0.5rem;
+  color: rgb(255, 255, 255,0)
+}
+
+.movieBoxes:hover .likeBut {
+  color: rgb(255, 255, 255,0.9)
+}
+
+.leftIcon {
+  color: rgb(255, 255, 255,0);
+  border-radius: 9999px;
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+  margin-top: 6.5rem;
+  margin-left: 1.5rem;
+  height: 30px;
+  width: 30px;
+}
+
+.rightIcon {
+  color: rgb(255, 255, 255,0);
+  border-radius: 9999px;
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+  margin-top: -8.3rem;
+  margin-left: 97%;
+  height: 30px;
+  width: 30px;
+}
+.rightIcon:hover {
+  color: rgb(255, 255, 255,0.9);
+}
+
+.leftIcon:hover {
+  color: rgb(255, 255, 255,0.9);
 }
