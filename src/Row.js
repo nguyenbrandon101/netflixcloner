@@ -1,8 +1,8 @@
 import React from "react";
+import Movie from "./Movie";
 /** FaReg = unlike FaHeart = like */
 import { FaHeart, FaRegHeart, FaArrowLeft,FaArrowRight} from "react-icons/fa";
 export default function Row(props) {
-    const [like,setLike] = React.useState(false)
     const [movies,setMovies] = React.useState([])
     React.useEffect(async() => {
         const response = await fetch(props.fetchData)
@@ -11,31 +11,32 @@ export default function Row(props) {
             setMovies(data.results)
         }
     },[props.fetchData])
-    function handleLike() {
-        return(
-        setLike(prev => !prev)
-        )
+    function sliderRight() {
+        let slider = document.getElementById("slider" + props.rowId)
+        slider.scrollLeft = (slider.scrollLeft + 500)
+
+    }
+    
+    function sliderLeft() {
+        let slider = document.getElementById("slider" + props.rowId)
+        slider.scrollLeft = (slider.scrollLeft - 500)
     }
     return (
         <div className="genreSec">
             <h1 className="genreTitle">{props.title}</h1>
             <div className="movie-section">
-                <FaArrowLeft className="leftIcon"></FaArrowLeft>
-                <div id={"slider"} className ="slider">
-                    {movies.map(movie => (
-                        <>
-                            <div className="movieBoxes">
-                                <img className = "movieImg"src={`https://image.tmdb.org/t/p/w500/${movie? movie.backdrop_path: undefined}`}></img>
-                                <div class="middle">
-                                    <div class="text">{movie.title}</div>
-                                    {like == false && <p className="likeBut" onClick={handleLike}><FaRegHeart></FaRegHeart></p>}
-                                    {like == true && <p className="likeBut" onClick={handleLike}><FaHeart></FaHeart></p>}
-                                </div> 
-                            </div>
-                        </>
+                <FaArrowLeft className="leftIcon" onClick={sliderLeft}></FaArrowLeft>
+                <div id={"slider" + `${props.rowId}`} className ="slider">
+                    {movies.map((movie,id) => (
+                        <Movie 
+                        key={id} 
+                        movie = {movie} 
+                        title = {movie.title}
+                        backdrop_path = {movie.backdrop_path}
+                        />
                     ))}
                 </div>
-                <FaArrowRight className="rightIcon"></FaArrowRight>
+                <FaArrowRight className="rightIcon" onClick={sliderRight}></FaArrowRight>
             </div>
         </div>
     )

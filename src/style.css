@@ -107,6 +107,10 @@ body {
   font-size: 15px;
   margin-top: 2rem;
 }
+
+.space-between {
+  margin-top: 9rem;
+}
 .upcoming {
   margin-top: 9.5rem;
 }
@@ -116,34 +120,11 @@ body {
   font-size: 15px;
   padding: 1rem;
 }
-@media only screen and (max-width: 640px) {
-  .movieBoxes {
-    width: 160px;
-    display:inline-block;
-    cursor: pointer;
-    padding: 1rem;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .movieBoxes  {
-      width: 240px;
-      display:inline-block;
-      cursor: pointer;
-      padding: 1rem;
-  }
-}
-@media only screen and (max-width: 1024px) {
-  .movieBoxes  {
-      width: 280px;
-      display:inline-block;
-      cursor: pointer;
-      padding: 1rem;
-  }
+.mv {
+  display: inline-block;
 }
 
 .movieBoxes {
-  display:inline-block;
   cursor: pointer;
   padding: 1rem;
   width: 360px;
@@ -154,9 +135,11 @@ body {
   width: 100%;
 }
 
+/*
 .slider {
   width: 100%;
   height: 100%;
+  overflow: scroll;
   overflow-x: scroll;
   white-space: nowrap;
   scroll-behavior: smooth;
@@ -166,6 +149,22 @@ body {
 .slider::-webkit-scrollbar {
   display: none;
 }
+*/
+.slider {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  overflow-x: scroll;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  position: relative;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
 
 .movieBoxes:hover img {
   opacity: 0.3;
