@@ -1,7 +1,7 @@
 import React from "react";
 import Movie from "./Movie";
 /** FaReg = unlike FaHeart = like */
-import { FaHeart, FaRegHeart, FaArrowLeft,FaArrowRight} from "react-icons/fa";
+import {FaArrowLeft,FaArrowRight} from "react-icons/fa";
 export default function Row(props) {
     const [movies,setMovies] = React.useState([])
     React.useEffect(async() => {

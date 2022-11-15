@@ -1,5 +1,5 @@
 import React from "react";
-import { FaHeart, FaRegHeart, FaArrowLeft,FaArrowRight} from "react-icons/fa";
+import { FaHeart, FaRegHeart} from "react-icons/fa";
 export default function Movie(props) {
     const [like,setLike] = React.useState(false)
     function handleLike() {

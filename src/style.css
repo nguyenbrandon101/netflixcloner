@@ -20,6 +20,9 @@ body {
     position: relative;
     z-index: 1;
 }
+.link {
+  text-decoration: none;
+}
 .netflix-logo {
     color: rgb(220 38 38);
     font-size: 2.25rem/* 36px */;
@@ -27,6 +30,7 @@ body {
     font-weight: 700;
     cursor: pointer;
     margin-left: 1rem;
+    text-decoration: none;
 }
 
 .signIn-but {
