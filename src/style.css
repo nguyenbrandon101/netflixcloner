@@ -226,3 +226,210 @@ body {
 .leftIcon:hover {
   color: rgb(255, 255, 255,0.9);
 }
+
+.signUpPage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.signUpPage img {
+  width: 100%;
+  height: 68rem;
+  object-fit:cover;
+  object-position: 10%;
+  margin-top: -6rem;
+  opacity: 0.7;
+}
+
+.blackBackground {
+  display: flex;
+  flex-direction: column;
+  position:absolute;
+  margin-top: 5rem;
+  width: 450px;
+  height: 600px;
+  background-color: rgb(0, 0, 0,0.7);
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  z-index: 60;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  position:absolute;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.blackBackground h1 {
+  color: white;
+  margin-right: 10rem;
+}
+
+.emailInput {
+
+  color: white;
+  padding: 0.75rem;
+  margin-top: 0.5rem/* 8px */;
+  margin-bottom: 0.5rem/* 8px */;
+  border: none;
+  width: 15rem;
+  border-radius:3px;
+}
+
+.passwordInput {
+  
+  padding: 0.75rem;
+  margin-top: 0.5rem/* 8px */;
+  margin-bottom: 0.5rem/* 8px */;
+  border: none;
+  color: white;
+  width: 15rem;
+  border-radius:3px;
+}
+
+.submitButton {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  margin-top: 0.5rem/* 8px */;
+  margin-bottom: 0.5rem/* 8px */;
+  border-radius:3px;
+  width: 16.5rem;
+}
+
+.remHelp {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.help {
+  margin-left: 4rem;
+}
+.subscr {
+  display: flex;
+  flex-direction: row;
+  font-size: 13px;
+  margin-right: 2.5rem;
+}
+.signLink {
+  text-decoration: none;
+  color: white;
+  margin-left: 0.5rem;
+}
+.already-sub {
+  color: gray;
+}
+
+/* Sign In*******************************************/
+.signInPage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.signInPage img {
+  width: 100%;
+  height: 68rem;
+  object-fit:cover;
+  object-position: 10%;
+  margin-top: -6rem;
+  opacity: 0.7;
+}
+
+.blackBackground {
+  display: flex;
+  flex-direction: column;
+  position:absolute;
+  margin-top: 5rem;
+  width: 450px;
+  height: 600px;
+  background-color: rgb(0, 0, 0,0.7);
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  z-index: 60;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  position:absolute;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.blackBackground h1 {
+  color: white;
+  margin-right: 10rem;
+}
+
+.emailInput {
+
+  color: white;
+  padding: 0.75rem;
+  margin-top: 0.5rem/* 8px */;
+  margin-bottom: 0.5rem/* 8px */;
+  border: none;
+  width: 15rem;
+  border-radius:3px;
+}
+
+.passwordInput {
+  
+  padding: 0.75rem;
+  margin-top: 0.5rem/* 8px */;
+  margin-bottom: 0.5rem/* 8px */;
+  border: none;
+  color: white;
+  width: 15rem;
+  border-radius:3px;
+}
+
+.submitButton {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  margin-top: 0.5rem/* 8px */;
+  margin-bottom: 0.5rem/* 8px */;
+  border-radius:3px;
+  width: 16.5rem;
+}
+
+.remHelp {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.help {
+  margin-left: 4rem;
+}
+.subscr-in {
+  display: flex;
+  flex-direction: row;
+  font-size: 13px;
+  margin-right: 7rem;
+}
+.signLink {
+  text-decoration: none;
+  color: white;
+  margin-left: 0.5rem;
+}
+.already-sub {
+  color: gray;
+}
