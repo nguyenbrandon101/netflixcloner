@@ -1,23 +1,25 @@
 import React from "react";
+
+import { Route, Routes } from 'react-router-dom';
 import Navibar from "./Navibar";
 import Home from "./Home";
-import {Routes, Route } from 'react-router-dom';
-/*{AuthContextProvider } from "./context/AuthContext";*/
 import { AuthContextProvider } from "./context/AuthContext";
 import Login from "./context/Login";
 import Signup from "./context/Signup";
 import Account from "./context/Account";
-export default function App() {
+function App() {
   return (
     <div>
       <AuthContextProvider></AuthContextProvider>
       <Navibar></Navibar>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="/signup" element={<Signup />}></Route>
-        <Route path="/account" element={<Account />}></Route>
+        <Route exact path='/' element={<Home />} />
+        <Route exact path='/Login' element={<Login />} />
+        <Route path='/Signup' element={<Signup />} />
+        <Route path="/Account" element={<Account />}></Route>
       </Routes>
     </div>
   )
 }
+
+export default App;
