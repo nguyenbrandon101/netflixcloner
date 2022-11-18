@@ -7,6 +7,7 @@ import {
 } from 'firebase/auth';
 
 const Signup = () => {
+
       const[email,setEmail] = React.useState("")
       const[password,setPassword] = React.useState("")
       const navigate = useNavigate()

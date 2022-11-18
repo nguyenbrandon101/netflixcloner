@@ -14,6 +14,8 @@ export default function Navibar() {
     const auth = getAuth();
     const[isUser,setIsUser] = React.useState(false)
     const[currUser,setUser] = React.useState()
+
+
     onAuthStateChanged(auth, (user) => {
       if (user) {
         // User is signed in, see docs for a list of available properties
@@ -39,12 +41,12 @@ export default function Navibar() {
             </Link>
             {!isUser ? ( 
                 <div className="sign-buttons">
-                <Link to= "/Login">
+                <a href= "/Login">
                     <button className="signIn-but"> Sign In</button>
-                </Link>
-                <Link to ='/Signup'>
+                </a>
+                <a href="/Signup">
                     <button className="signUp-but"> Sign Up</button>
-                </Link>
+                </a>
                 </div>
              ) : (
                 <div className="sign-buttons">
