@@ -433,3 +433,8 @@ form {
 .already-sub {
   color: gray;
 }
+
+.wrong {
+  color: red;
+  font-size: 20px;
+}

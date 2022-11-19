@@ -1,7 +1,25 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {Link , useNavigate} from 'react-router-dom'
+import {auth} from '../firebase';
+import {
+  signInWithEmailAndPassword
+} from 'firebase/auth';
 const Login = () => {
-    /**Reload screen to display NavBar */
+    const[email,setEmail] = React.useState("")
+    const[password,setPassword] = React.useState("")
+    const[wrong,setWrong] = React.useState(false)
+    const navigate = useNavigate()
+    async function handleSubmit(event) {
+      event.preventDefault()
+      try {
+        await signInWithEmailAndPassword(auth, email, password);
+        setWrong(false)
+        navigate('/')
+      } catch (error) {
+        console.log(error)
+        setWrong(true)
+      }
+    }
     return (
     <div>
       <div>
@@ -9,9 +27,10 @@ const Login = () => {
           <div className='blackBackground'>
                            
                 <h1>Sign In</h1>
-                <input className='emailInput' placeholder='Email or phone number'></input>
-                <input className='passwordInput' placeholder='Password'></input>
-                <button type='submit' className='submitButton'>Sign In</button>
+                {wrong === true && <h2 className='wrong'>Wrong Email or Password</h2>}
+                <input className='emailInput' placeholder='Email or phone number' onChange={(event)=> setEmail(event.target.value)}></input>
+                <input className='passwordInput' placeholder='Password' type="password" onChange={(event)=> setPassword(event.target.value)}></input>
+                <button type='submit' onClick={handleSubmit} className='submitButton'>Sign In</button>
                 <div className='remHelp'>
                   <p><input type="checkbox" className='remember'></input>Remember me</p>
                   <p className='help'>Need Help?</p>

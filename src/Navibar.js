@@ -8,7 +8,8 @@ import {
     onAuthStateChanged,
     getAuth
   } from 'firebase/auth';
-
+import Account from "./context/Account";
+import { ProtectedRoute } from "./ProtectedRoute";
 export default function Navibar() {
     const navigate = useNavigate()
     const auth = getAuth();
@@ -21,18 +22,21 @@ export default function Navibar() {
         // User is signed in, see docs for a list of available properties
         // https://firebase.google.com/docs/reference/js/firebase.User
         setIsUser(true)
-        setIsUser(user)
+        setUser(user)
       } else {
         console.log("no users")
     
       }
     })
-
     function handleLogout() {
         setUser("")
         setIsUser(false)
         signOut(auth)
+        return (
+            <a href="/"></a>
+        )
     }
+
 
     return (
         <div className="navi">
@@ -50,10 +54,10 @@ export default function Navibar() {
                 </div>
              ) : (
                 <div className="sign-buttons">
-                <button className="signIn-but"> Account</button>
-                <Link to ='/'>
-                    <button className="signUp-but" onClick={handleLogout}> Log Out</button>
-                </Link>
+                <a href="/Account">
+                    <button className="signIn-but"> Account</button>
+                </a>
+                <button className="signUp-but" onClick={handleLogout}> Log Out</button>
                 </div>
              )}        
 

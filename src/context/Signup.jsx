@@ -27,7 +27,7 @@ const Signup = () => {
                 <form>              
                   <h1>Sign Up</h1>
                   <input className='emailInput' placeholder='Email or phone number' onChange={(event)=> setEmail(event.target.value)}></input>
-                  <input className='passwordInput' placeholder='Password' onChange={(event)=> setPassword(event.target.value)}></input>
+                  <input className='passwordInput' type="password" placeholder='Password' onChange={(event)=> setPassword(event.target.value)}></input>
                   <button type='submit' onClick={handleSubmit} className='submitButton'>Sign Up</button>
                   <div className='remHelp'>
                     <p><input type="checkbox" className='remember'></input>Remember me</p>
