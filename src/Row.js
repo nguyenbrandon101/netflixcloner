@@ -30,6 +30,7 @@ export default function Row(props) {
                     {movies.map((movie,id) => (
                         <Movie 
                         key={id} 
+                        id = {id}
                         movie = {movie} 
                         title = {movie.title}
                         backdrop_path = {movie.backdrop_path}

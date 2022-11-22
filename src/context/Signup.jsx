@@ -1,11 +1,11 @@
 import React from 'react'
 import {Link , useNavigate} from 'react-router-dom'
-import {auth} from '../firebase';
 import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
 } from 'firebase/auth';
-
+import { getFirestore,setDoc,doc } from "firebase/firestore";
+import {auth,db} from '../firebase';
 const Signup = () => {
 
       const[email,setEmail] = React.useState("")
@@ -15,6 +15,9 @@ const Signup = () => {
         event.preventDefault()
         try {
           await createUserWithEmailAndPassword(auth, email, password)
+          setDoc(doc(db,'users',email),{
+            savedShows:[]
+          })
           navigate('/')
         } catch (error) {
           console.log(error)

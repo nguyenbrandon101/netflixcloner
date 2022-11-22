@@ -1,5 +1,5 @@
 import React from "react";
-import {Link , useNavigate} from 'react-router-dom'
+import {Link , Router, useNavigate} from 'react-router-dom'
 import { UserAuth } from "./context/AuthContext";
 import {
     createUserWithEmailAndPassword,
@@ -8,8 +8,7 @@ import {
     onAuthStateChanged,
     getAuth
   } from 'firebase/auth';
-import Account from "./context/Account";
-import { ProtectedRoute } from "./ProtectedRoute";
+import Account from "./Account";
 export default function Navibar() {
     const navigate = useNavigate()
     const auth = getAuth();
@@ -32,35 +31,32 @@ export default function Navibar() {
         setUser("")
         setIsUser(false)
         signOut(auth)
-        return (
-            <a href="/"></a>
-        )
+        navigate('/')
+        window.location.reload()
     }
-
-
     return (
+
         <div className="navi">
-            <Link className="link" to='/'>
+            <a className="link" href='/'>
             <h1 className='netflix-logo'>NETFLIX</h1>
-            </Link>
+            </a>
             {!isUser ? ( 
                 <div className="sign-buttons">
-                <a href= "/Login">
-                    <button className="signIn-but"> Sign In</button>
-                </a>
-                <a href="/Signup">
-                    <button className="signUp-but"> Sign Up</button>
-                </a>
+                    <a href= "/Login">
+                        <button className="signIn-but"> Sign In</button>
+                    </a>
+                    <a href="/Signup">
+                        <button className="signUp-but"> Sign Up</button>
+                    </a>
                 </div>
-             ) : (
-                <div className="sign-buttons">
-                <a href="/Account">
-                    <button className="signIn-but"> Account</button>
-                </a>
-                <button className="signUp-but" onClick={handleLogout}> Log Out</button>
+            ) : (
+                <div className="sign-buttons">    
+                    <a href="/Account">
+                        <button className="signIn-but"> Account</button>
+                    </a>
+                    <button className="signUp-but" onClick={handleLogout}> Log Out</button>
                 </div>
-             )}        
-
+            )}        
         </div>
     )
 }

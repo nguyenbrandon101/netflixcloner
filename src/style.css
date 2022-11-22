@@ -1,8 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 body {
     background-color: black;
     font-family: 'Lato', sans-serif;
@@ -437,4 +435,40 @@ form {
 .wrong {
   color: red;
   font-size: 20px;
+}
+
+.test {
+  color: green;
+}
+
+.accountBackground {
+  width: 100%;
+  height: 450px;
+  position: absolute;
+  top: -1rem;
+}
+
+.accountBackground img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+}
+
+.accountBackground h1 {
+  color: white;
+  font-size: 45px;
+  margin-left: 1rem;
+  margin-top: -15rem;
+  opacity: 0.9;
+}
+
+.displayFav {
+  margin-top: 25rem;
+}
+
+.favTitle {
+  color: white;
+  font-family: 'Lato', sans-serif;
+  margin-left: 1rem;
+  font-size: 25px;
 }

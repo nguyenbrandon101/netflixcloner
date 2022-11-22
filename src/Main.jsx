@@ -1,5 +1,4 @@
-import { async } from "@firebase/util";
-import axios from "axios";
+
 import React from "react";
 import requests from "./Request";
 
@@ -20,7 +19,7 @@ export default function Main() {
         <div className="homeScreening">
             <div className="headerSec">
                 <div className="imgSec">
-                    <img className="homeImg" src={`https://image.tmdb.org/t/p/original/${randomMovie? randomMovie.backdrop_path: undefined}`}></img> 
+                    <img className="homeImg" src={`https://image.tmdb.org/t/p/original/${randomMovie? randomMovie.backdrop_path: undefined}`}alt=""></img> 
                 </div>
                 <div className="headerImgInfo">
                     <h1>{randomMovie ? randomMovie.title: undefined}</h1>

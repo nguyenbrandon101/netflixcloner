@@ -6,8 +6,7 @@ import Home from "./Home";
 import { AuthContextProvider } from "./context/AuthContext";
 import Login from "./context/Login";
 import Signup from "./context/Signup";
-import Account from "./context/Account";
-import { ProtectedRoute } from "./ProtectedRoute";
+import Account from "./Account";
 function App() {
   return (
     <>
@@ -17,7 +16,7 @@ function App() {
           <Route exact path='/' element={<Home />} />
           <Route exact path='/Login' element={<Login />} />
           <Route path='/Signup' element={<Signup />} />
-          <Route path="/Account" element={<ProtectedRoute><Account /></ProtectedRoute>}></Route>
+          <Route path="/Account" element={<Account />}></Route>
         </Routes>
       </AuthContextProvider>
     </>
